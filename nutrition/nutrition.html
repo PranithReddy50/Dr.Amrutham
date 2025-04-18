@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutrition Guide - Dr.Amrutham</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background: #f5fdf9;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .nutrition-filter {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 0.8rem 1.5rem;
+            background: #2a7f62;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .filter-btn.active {
+            background: #1f604a;
+            transform: scale(1.05);
+        }
+
+        .food-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .food-card {
+            background: white;
+            padding: 1rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .food-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .food-price {
+            color: #1f604a;
+            font-weight: bold;
+            margin: 0.5rem 0;
+        }
+
+        .food-type {
+            display: inline-block;
+            padding: 0.2rem 0.5rem;
+            border-radius: 3px;
+            font-size: 0.8rem;
+        }
+
+        .fruit {
+            background: #f0fff4;
+            color: #2a7f62;
+        }
+
+        .vegetable {
+            background: #fff5f0;
+            color: #7f2a2a;
+        }
+
+        .nut {
+            background: #fff8e1;
+            color: #8a6d3b;
+        }
+
+        .dairy {
+            background: #e3f2fd;
+            color: #1976d2;
+        }
+
+        .meat {
+            background: #ffebee;
+            color: #c62828;
+        }
+
+        .grain {
+            background: #f3e5f5;
+            color: #8e24aa;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Nutrition Guide</h1>
+        
+        <div class="nutrition-filter">
+            <button class="filter-btn active" data-nutrition="all">All</button>
+            <button class="filter-btn" data-nutrition="fiber">Fiber</button>
+            <button class="filter-btn" data-nutrition="protein">Protein</button>
+            <button class="filter-btn" data-nutrition="vitamins">Vitamins</button>
+            <button class="filter-btn" data-nutrition="iron">Iron</button>
+            <button class="filter-btn" data-nutrition="calcium">Calcium</button>
+        </div>
+
+        <div class="food-grid" id="foodContainer">
+            <!-- Food items will be inserted -->
+        </div>
+    </div>
+
+    <script>
+        const foodData = {
+            fiber: [
+                { name: "Oats", type: "grain", price: 1.99, content: "10g/100g" },
+                { name: "Black Beans", type: "vegetable", price: 2.49, content: "15g/100g" },
+                { name: "Raspberries", type: "fruit", price: 3.99, content: "6.5g/100g" },
+                { name: "Quinoa", type: "grain", price: 4.99, content: "7g/100g" },
+                { name: "Chia Seeds", type: "seed", price: 5.99, content: "34g/100g" },
+                { name: "Lentils", type: "vegetable", price: 1.79, content: "8g/100g" },
+                { name: "Broccoli", type: "vegetable", price: 1.29, content: "2.6g/100g" },
+                { name: "Avocado", type: "fruit", price: 2.49, content: "6.7g/100g" },
+                { name: "Almonds", type: "nut", price: 6.99, content: "12.5g/100g" },
+                { name: "Sweet Potato", type: "vegetable", price: 0.99, content: "3g/100g" }
+            ],
+            protein: [
+                { name: "Chicken Breast", type: "meat", price: 4.99, content: "31g/100g" },
+                { name: "Lentils", type: "vegetable", price: 1.79, content: "9g/100g" },
+                { name: "Almonds", type: "nut", price: 6.99, content: "21g/100g" },
+                { name: "Eggs", type: "dairy", price: 0.89, content: "13g/100g" },
+                { name: "Greek Yogurt", type: "dairy", price: 2.49, content: "10g/100g" },
+                { name: "Tofu", type: "vegetable", price: 3.49, content: "8g/100g" },
+                { name: "Salmon", type: "meat", price: 8.99, content: "25g/100g" },
+                { name: "Cottage Cheese", type: "dairy", price: 2.99, content: "11g/100g" },
+                { name: "Peanuts", type: "nut", price: 3.99, content: "26g/100g" },
+                { name: "Chickpeas", type: "vegetable", price: 1.49, content: "19g/100g" }
+            ],
+            vitamins: [
+                { name: "Oranges", type: "fruit", price: 1.99, content: "Vitamin C" },
+                { name: "Spinach", type: "vegetable", price: 1.49, content: "Vitamin K" },
+                { name: "Carrots", type: "vegetable", price: 0.99, content: "Vitamin A" },
+                { name: "Bell Peppers", type: "vegetable", price: 1.99, content: "Vitamin C" },
+                { name: "Kale", type: "vegetable", price: 2.99, content: "Vitamin A" },
+                { name: "Strawberries", type: "fruit", price: 3.49, content: "Vitamin C" },
+                { name: "Tomatoes", type: "vegetable", price: 0.29, content: "Vitamin C" },
+                { name: "Mango", type: "fruit", price: 2.49, content: "Vitamin A" },
+                { name: "Kiwi", type: "fruit", price: 3.99, content: "Vitamin C" },
+                { name: "Papaya", type: "fruit", price: 2.99, content: "Vitamin A" }
+            ],
+            iron: [
+                { name: "Spinach", type: "vegetable", price: 1.49, content: "2.7mg/100g" },
+                { name: "Red Meat", type: "meat", price: 8.99, content: "2.6mg/100g" },
+                { name: "Lentils", type: "vegetable", price: 1.79, content: "3.3mg/100g" },
+                { name: "Pumpkin Seeds", type: "seed", price: 4.99, content: "8.8mg/100g" },
+                { name: "Quinoa", type: "grain", price: 4.99, content: "1.5mg/100g" },
+                { name: "Tofu", type: "vegetable", price: 3.49, content: "5.4mg/100g" },
+                { name: "Chickpeas", type: "vegetable", price: 1.49, content: "2.9mg/100g" },
+                { name: "Dark Chocolate", type: "other", price: 5.99, content: "11.9mg/100g" },
+                { name: "Beef Liver", type: "meat", price: 7.99, content: "6.5mg/100g" },
+                { name: "Sardines", type: "meat", price: 6.99, content: "2.9mg/100g" }
+            ],
+            calcium: [
+                { name: "Milk", type: "dairy", price: 0.79, content: "125mg/100ml" },
+                { name: "Kale", type: "vegetable", price: 2.99, content: "150mg/100g" },
+                { name: "Almonds", type: "nut", price: 6.99, content: "264mg/100g" },
+                { name: "Cheese", type: "dairy", price: 3.99, content: "721mg/100g" },
+                { name: "Yogurt", type: "dairy", price: 2.49, content: "110mg/100g" },
+                { name: "Broccoli", type: "vegetable", price: 1.29, content: "47mg/100g" },
+                { name: "Sardines", type: "meat", price: 6.99, content: "382mg/100g" },
+                { name: "Tofu", type: "vegetable", price: 3.49, content: "350mg/100g" },
+                { name: "Figs", type: "fruit", price: 4.99, content: "35mg/100g" },
+                { name: "Oranges", type: "fruit", price: 2.99, content: "40mg/100g" }
+            ]
+        };
+
+        // (1 USD = 83 INR)
+        const usdToInr = 83;
+
+        function renderFoodItems(nutritionType = "all") {
+            const container = document.getElementById('foodContainer');
+            container.innerHTML = '';
+            
+            let items = [];
+            if (nutritionType === 'all') {
+                Object.values(foodData).forEach(category => items.push(...category));
+            } else {
+                items = foodData[nutritionType] || [];
+            }
+            
+            // Sort by price (low to high)
+            items.sort((a, b) => a.price - b.price);
+
+            items.forEach(item => {
+                const card = document.createElement('div');
+                card.className = 'food-card';
+                card.innerHTML = `
+                    <div class="food-type ${item.type}">${item.type}</div>
+                    <h3>${item.name}</h3>
+                    <div class="food-price">₹${(item.price * usdToInr).toFixed(2)}</div>
+                    <div class="nutrition-content">${item.content}</div>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        // Initial render
+        renderFoodItems();
+
+        // Filter buttons click handler
+        document.querySelectorAll('.filter-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+                const nutritionType = this.dataset.nutrition;
+                renderFoodItems(nutritionType);
+            });
+        });
+    </script>
+</body>
+</html>

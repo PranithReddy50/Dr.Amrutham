@@ -1,0 +1,91 @@
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background: #f0f9ff;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        h1 {
+            color: #1a4d3c;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+            gap: 1.5rem;
+        }
+
+        .frequency-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .frequency-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .illness-name {
+            color: #2a7f62;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .frequency {
+            color: #4a4a4a;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .frequency span {
+            color: #1a4d3c;
+            font-weight: bold;
+        }
+
+        .play-button {
+            background: #2a7f62;
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            width: 100%;
+            font-size: 1rem;
+        }
+
+        .play-button:hover {
+            background: #1f604a;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+        }
+   
+

@@ -1,0 +1,212 @@
+{
+    "diabetes": {
+        "desc": "Chronic condition affecting blood sugar regulation.",
+        "fruits": [
+            {"name": "Berries", "benefit": "Rich in antioxidants and fiber to regulate blood sugar"},
+            {"name": "Apples", "benefit": "Pectin slows sugar absorption"}
+        ],
+        "veggies": [
+            {"name": "Bitter Gourd", "benefit": "Contains natural insulin-like compounds"},
+            {"name": "Spinach", "benefit": "Magnesium improves insulin sensitivity"}
+        ],
+        "drinks": [
+            {"name": "Green Tea", "benefit": "Improves glucose metabolism"}
+        ]
+    },
+    "hypertension": {
+        "desc": "Persistent elevation of blood pressure.",
+        "fruits": [
+            {"name": "Bananas", "benefit": "Potassium counters sodium effects"},
+            {"name": "Watermelon", "benefit": "Citrulline relaxes blood vessels"}
+        ],
+        "veggies": [
+            {"name": "Celery", "benefit": "Reduces artery tension"},
+            {"name": "Garlic", "benefit": "Allicin promotes vasodilation"}
+        ],
+        "drinks": [
+            {"name": "Hibiscus Tea", "benefit": "Natural ACE inhibitor"}
+        ]
+    },
+    "cholesterol": {
+        "desc": "Excess fatty substances in bloodstream.",
+        "fruits": [
+            {"name": "Avocados", "benefit": "Monounsaturated fats lower LDL"},
+            {"name": "Grapes", "benefit": "Resveratrol improves lipid profile"}
+        ],
+        "veggies": [
+            {"name": "Okra", "benefit": "Soluble fiber binds cholesterol"},
+            {"name": "Eggplant", "benefit": "Nasunin protects cell membranes"}
+        ],
+        "drinks": [
+            {"name": "Oat Milk", "benefit": "Beta-glucan reduces absorption"}
+        ]
+    },
+    "asthma": {
+        "desc": "Chronic respiratory inflammation.",
+        "fruits": [
+            {"name": "Apples", "benefit": "Quercetin protects lungs"},
+            {"name": "Oranges", "benefit": "Vitamin C boosts immunity"}
+        ],
+        "veggies": [
+            {"name": "Ginger", "benefit": "Reduces airway inflammation"},
+            {"name": "Spinach", "benefit": "Magnesium improves lung function"}
+        ],
+        "drinks": [
+            {"name": "Ginger Tea", "benefit": "Anti-inflammatory properties"}
+        ]
+    },
+    "obesity": {
+        "desc": "Excessive accumulation of body fat increasing health risks.",
+        "fruits": [
+            { "name": "Apples", "benefit": "High in fiber, promoting satiety and aiding weight loss" },
+            { "name": "Berries", "benefit": "Rich in antioxidants and fiber, supporting weight management" }
+        ],
+        "veggies": [
+            { "name": "Leafy Greens", "benefit": "Low in calories and high in fiber, helping to control hunger" },
+            { "name": "Cruciferous Vegetables", "benefit": "Nutrient-dense and may aid in weight loss" }
+        ],
+        "drinks": [
+            { "name": "Green Tea", "benefit": "Contains catechins that may boost metabolism and aid in fat loss" }
+        ]
+    },
+    "heart": {
+        "desc": "Conditions affecting the heart's function and structure.",
+        "fruits": [
+            { "name": "Oranges", "benefit": "High in vitamin C and potassium, supporting heart health" },
+            { "name": "Berries", "benefit": "Rich in antioxidants, reducing heart disease risk" }
+        ],
+        "veggies": [
+            { "name": "Leafy Greens", "benefit": "Contain vitamins and minerals that benefit the heart" },
+            { "name": "Tomatoes", "benefit": "Rich in lycopene, associated with reduced heart disease risk" }
+        ],
+        "drinks": [
+            { "name": "Pomegranate Juice", "benefit": "May improve blood flow and reduce arterial plaque" }
+        ]
+    },
+    "ibs": {
+        "desc": "Irritable Bowel Syndrome affecting digestive health.",
+        "fruits": [
+            { "name": "Bananas", "benefit": "Easily digestible and may help with diarrhea" },
+            { "name": "Blueberries", "benefit": "Contain antioxidants and are generally well-tolerated" }
+        ],
+        "veggies": [
+            { "name": "Carrots", "benefit": "Cooked carrots are gentle on the digestive system" },
+            { "name": "Zucchini", "benefit": "Low in FODMAPs and easy to digest" }
+        ],
+        "drinks": [
+            { "name": "Peppermint Tea", "benefit": "May help relieve IBS symptoms like bloating and gas" }
+        ]
+    },
+    "kidney": {
+        "desc": "Impaired kidney function leading to waste accumulation.",
+        "fruits": [
+            { "name": "Red Grapes", "benefit": "Contain resveratrol, supporting kidney health" },
+            { "name": "Pineapple", "benefit": "Low in potassium, suitable for kidney diets" }
+        ],
+        "veggies": [
+            { "name": "Cauliflower", "benefit": "Low in potassium and a good source of fiber" },
+            { "name": "Cabbage", "benefit": "Low in potassium and high in vitamins" }
+        ],
+        "drinks": [
+            { "name": "Water", "benefit": "Essential for kidney function and waste removal" }
+        ]
+    },
+    "liver": {
+        "desc": "Liver disorders affecting metabolism and detoxification.",
+        "fruits": [
+            { "name": "Grapefruit", "benefit": "Contains antioxidants that protect the liver" },
+            { "name": "Berries", "benefit": "High in antioxidants, supporting liver health" }
+        ],
+        "veggies": [
+            { "name": "Broccoli", "benefit": "May increase liver detoxification enzymes" },
+            { "name": "Beets", "benefit": "Contain nitrates and antioxidants beneficial for the liver" }
+        ],
+        "drinks": [
+            { "name": "Coffee", "benefit": "May protect the liver from damage" }
+        ]
+    },
+    "migraine": {
+        "desc": "Recurring headaches with sensory disturbances.",
+        "fruits": [
+            { "name": "Cherries", "benefit": "Contain compounds that may reduce headache frequency" },
+            { "name": "Watermelon", "benefit": "Hydrating and may prevent dehydration-related migraines" }
+        ],
+        "veggies": [
+            { "name": "Spinach", "benefit": "High in magnesium, which may reduce migraine frequency" },
+            { "name": "Sweet Potatoes", "benefit": "Contain vitamin B6, which may help alleviate symptoms" }
+        ],
+        "drinks": [
+            { "name": "Ginger Tea", "benefit": "May reduce migraine severity" }
+        ]
+    },
+    "depression": {
+        "desc": "Mood disorder causing persistent feelings of sadness.",
+        "fruits": [
+            { "name": "Bananas", "benefit": "Contain tryptophan, which may improve mood" },
+            { "name": "Berries", "benefit": "High in antioxidants, supporting brain health" }
+        ],
+        "veggies": [
+            { "name": "Leafy Greens", "benefit": "Rich in folate, which may help alleviate depression" },
+            { "name": "Tomatoes", "benefit": "Contain lycopene, associated with mood improvement" }
+        ],
+        "drinks": [
+            { "name": "Green Tea", "benefit": "Contains L-theanine, which may have calming effects" }
+        ]
+    },
+    "acne": {
+        "desc": "Skin condition involving blocked hair follicles and oil.",
+        "fruits": [
+            { "name": "Oranges", "benefit": "High in vitamin C, supporting skin health" },
+            { "name": "Papaya", "benefit": "Contains enzymes that may reduce inflammation" }
+        ],
+        "veggies": [
+            { "name": "Carrots", "benefit": "Rich in beta-carotene, promoting healthy skin" },
+            { "name": "Spinach", "benefit": "High in antioxidants, supporting skin repair" }
+        ],
+        "drinks": [
+            { "name": "Spearmint Tea", "benefit": "May reduce hormonal acne" }
+        ]
+    },
+    "backpain": {
+        "desc": "Chronic discomfort or pain in the lower or upper back.",
+        "fruits": [
+            { "name": "Cherries", "benefit": "Contain antioxidants that may reduce inflammation" },
+            { "name": "Pineapple", "benefit": "Contains bromelain, which may alleviate pain" }
+        ],
+        "veggies": [
+            { "name": "Kale", "benefit": "High in anti-inflammatory compounds" },
+            { "name": "Broccoli", "benefit": "Contains sulforaphane, which may reduce pain" }
+        ],
+        "drinks": [
+            { "name": "Turmeric Milk", "benefit": "Contains curcumin, a natural anti-inflammatory" }
+        ]
+    },
+    "headache": {
+        "desc": "Frequent or chronic pain in the head region.",
+        "fruits": [
+            { "name": "Bananas", "benefit": "Rich in magnesium, which can ease headache symptoms" },
+            { "name": "Watermelon", "benefit": "Hydrating and may help prevent dehydration-related headaches" }
+        ],
+        "veggies": [
+            { "name": "Spinach", "benefit": "High in magnesium and folate, helpful for preventing headaches" },
+            { "name": "Cucumbers", "benefit": "Hydrating and may reduce headache frequency" }
+        ],
+        "drinks": [
+            { "name": "Ginger Tea", "benefit": "May help reduce inflammation and ease headache pain" }
+        ]
+    },
+    "constipation": {
+        "desc": "Difficult or infrequent bowel movements.",
+        "fruits": [
+            { "name": "Prunes", "benefit": "High in fiber and natural laxatives" },
+            { "name": "Pears", "benefit": "Contain sorbitol and fiber to ease bowel movements" }
+        ],
+        "veggies": [
+            { "name": "Broccoli", "benefit": "High in fiber, aiding digestion" },
+            { "name": "Sweet Corn", "benefit": "Insoluble fiber helps with bowel regularity" }
+        ],
+        "drinks": [
+            { "name": "Warm Water with Lemon", "benefit": "Stimulates digestive movement" }
+        ]
+    }
+}
