@@ -1,0 +1,12 @@
+# dr.Amrutham 
+#project overview:
+Developed a web-based platform to provide personalized dietary recommendations for chronic diseases like diabetes, hypertension, obesity, and gut-related issues.
+Integrated Frequency Therapy insights to complement dietary suggestions, offering a holistic approach to health management.
+Designed to educate users on natural remedies, backed by Ayurveda and modern nutrition science, while encouraging consultation with doctors for severe cases.
+  
+# Technologies Used:
+Frontend: HTML, CSS, JavaScript
+Backend: Node.js, Express.js
+Database: JSON (for storing food recommendations and frequency therapy data)
+Version Control: Git, GitHub
+
